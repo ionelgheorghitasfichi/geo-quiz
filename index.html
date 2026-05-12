@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geo Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Geo Quiz</h1>
+      <p class="subtitle">Test your knowledge of world history &amp; geography</p>
+    </header>
+
+    <!-- Quiz selection screen -->
+    <section id="home-screen" class="screen active">
+      <h2>Choose a Quiz</h2>
+      <div id="quiz-list" class="quiz-grid"></div>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-header">
+        <button id="btn-back" class="btn-secondary">&larr; Back</button>
+        <span id="quiz-title-label" class="quiz-title"></span>
+        <span id="progress-label" class="progress-label"></span>
+      </div>
+      <div class="progress-bar-track">
+        <div id="progress-bar" class="progress-bar-fill"></div>
+      </div>
+      <div id="question-card" class="question-card">
+        <p id="question-text" class="question-text"></p>
+        <div id="options-list" class="options-list"></div>
+      </div>
+      <div id="feedback" class="feedback hidden">
+        <p id="feedback-text"></p>
+        <button id="btn-next" class="btn-primary">Next</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="results-screen" class="screen">
+      <div class="results-card">
+        <div id="score-icon" class="score-icon"></div>
+        <h2>Quiz Complete!</h2>
+        <p id="results-score" class="results-score"></p>
+        <p id="results-message" class="results-message"></p>
+        <div class="results-actions">
+          <button id="btn-retry" class="btn-primary">Try Again</button>
+          <button id="btn-home" class="btn-secondary">Home</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="quizzes/romania-history.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
